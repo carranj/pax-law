@@ -1,0 +1,12 @@
+# Wordpress defaults
+wp-admin/
+wp-includes/
+wp-config.php
+wp-config-local.php
+wp-config-prod.php
+wp-content/plugins
+wp-content/uploads/
+wp-content/themes/twentytwentytwo/
+wp-content/ai1wm-backups/
+wp-content/ewww/
+*.DS_Store

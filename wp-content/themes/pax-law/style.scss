@@ -1,0 +1,196 @@
+/*
+Theme Name: Pax Law, PLLC
+Theme URI: https://paxlawtx.com
+Author: Jose Carranco
+Author URI: http://josecarranco.com
+Description: Custom theme made for Pax Law, PLLC. This theme is fully responsive. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Pax Law, PLLC
+
+*/
+
+/**************************************************************************************************
+Imports
+***************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/**************************************************************************************************
+Variables
+***************************************************************************************************/
+$admin-bar-height: 32px;
+$dark-grey: #3A3B3C;
+
+/**************************************************************************************************
+Universal
+***************************************************************************************************/
+html,body{
+  width: 100%;
+  height: 100%;
+}
+article {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+header, main, footer{
+  flex-shrink: 0;
+}
+main {
+  flex-grow: 1;
+}
+.clear-fix {
+  clear: both;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  &.logged-in {
+    #wrapper {
+      margin-top: $admin-bar-height;
+      .sidebar {
+        margin-top: $admin-bar-height;
+      }
+    }
+  }
+  &.container {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  color:$dark-grey;
+  a{
+    color:#070707;
+    text-decoration:none;
+  }
+}
+
+h2 {
+  font-size: 36px;
+}
+p {
+  font-size: 18px; 
+}
+
+/**************************************************************************************************
+Header
+***************************************************************************************************/
+header {
+  nav{
+  .navbar-toggler{
+   display: none; 
+  }
+    
+    #logo {
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+    img{
+      &.nav-toggle{
+        max-width: 40px;
+        padding: 5px 3px;
+      }
+    }
+    
+    #menu-main-navigation {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      li {
+        display: inline-block;
+        border-bottom:1px solid #ffffff;
+        &.current-menu-item {
+          border-bottom:1px solid #070707;
+          background-color:#070707;
+          a{
+            color:#ffffff;
+          }
+        }
+        a {
+          text-decoration: none;
+          display: block;
+          font-size:14px;
+          color: #070707;
+          font-weight: 500;
+          transition: all 0.15s linear;
+          text-align: right;
+          padding:3px 8px;
+        }
+
+        &:hover {
+          a {
+            text-decoration: none;
+            color: lighten(#070707, 50%);
+            transition: all 0.15s linear;
+          }
+          .sub-menu{
+            display: block;
+          }
+        }
+        ul{
+          &.sub-menu{
+            display: none;
+            position: absolute;
+            margin:0;
+            padding:0;
+            width:180px;
+            font-weight: 400;
+            text-transform: none;
+            li{
+              width:180px;
+              a{
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+/**************************************************************************************************
+Footer
+***************************************************************************************************/
+footer {
+  margin-top: 30px;
+  padding: 30px 0;
+  p {
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+}
+
+/********************************************
+Homepage
+*********************************************/
+
+
+/********************************************
+Inside Page Template
+*********************************************/
+section{
+  &#intro{
+    background-position: top center;
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
