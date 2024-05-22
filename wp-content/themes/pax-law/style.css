@@ -47,7 +47,8 @@ main {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: #000000;
+  color: #010101;
+  background-color: #FAF9F6;
 }
 body.logged-in #wrapper {
   margin-top: 32px;
@@ -62,19 +63,21 @@ body.container img {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
+  color: #ac9283;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 44px;
   text-transform: uppercase;
   color: #3A3B3C;
 }
 h1 a {
-  color: #070707;
+  color: #010101;
   text-decoration: none;
 }
 
 h2 {
+  font-weight: 500;
   font-size: 36px;
 }
 
@@ -85,53 +88,64 @@ p {
 /**************************************************************************************************
 Header
 ***************************************************************************************************/
-header nav .navbar-toggler {
+header section#contact {
+  background-color: #061651;
+  color: #FAF9F6;
+}
+header section#contact a {
+  color: #FAF9F6;
+  text-decoration: none;
+}
+header nav.navbar {
+  padding: 12px 0px;
+}
+header nav.navbar .navbar-toggler {
   display: none;
 }
-header nav #logo img {
+header nav.navbar #logo.navbar-brand {
   width: 100%;
-  max-width: 350px;
 }
-header nav img.nav-toggle {
+header nav.navbar #logo.navbar-brand img {
+  width: 100%;
+  max-width: 375px;
+}
+header nav.navbar img.nav-toggle {
   max-width: 40px;
   padding: 5px 3px;
 }
-header nav #menu-main-navigation {
+header nav.navbar #menu-main-navigation {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-header nav #menu-main-navigation li {
+header nav.navbar #menu-main-navigation li {
   display: inline-block;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #FAF9F6;
+  margin: 3px 12px;
 }
-header nav #menu-main-navigation li.current-menu-item {
-  border-bottom: 1px solid #070707;
-  background-color: #070707;
+header nav.navbar #menu-main-navigation li.current-menu-item {
+  border-bottom: 1px solid #010101;
 }
-header nav #menu-main-navigation li.current-menu-item a {
-  color: #ffffff;
+header nav.navbar #menu-main-navigation li.current-menu-item a {
+  color: #010101;
 }
-header nav #menu-main-navigation li a {
+header nav.navbar #menu-main-navigation li a {
   text-decoration: none;
-  display: block;
-  font-size: 14px;
-  color: #070707;
+  font-size: 18px;
+  color: #010101;
   font-weight: 500;
   transition: all 0.15s linear;
-  text-align: right;
-  padding: 3px 8px;
 }
-header nav #menu-main-navigation li:hover a {
+header nav.navbar #menu-main-navigation li:hover a {
   text-decoration: none;
-  color: #878787;
+  color: #818181;
   transition: all 0.15s linear;
 }
-header nav #menu-main-navigation li:hover .sub-menu {
+header nav.navbar #menu-main-navigation li:hover .sub-menu {
   display: block;
 }
-header nav #menu-main-navigation li ul.sub-menu {
+header nav.navbar #menu-main-navigation li ul.sub-menu {
   display: none;
   position: absolute;
   margin: 0;
@@ -140,11 +154,17 @@ header nav #menu-main-navigation li ul.sub-menu {
   font-weight: 400;
   text-transform: none;
 }
-header nav #menu-main-navigation li ul.sub-menu li {
+header nav.navbar #menu-main-navigation li ul.sub-menu li {
   width: 180px;
 }
-header nav #menu-main-navigation li ul.sub-menu li a {
+header nav.navbar #menu-main-navigation li ul.sub-menu li a {
   text-align: left;
+}
+header nav.navbar #menu-main-navigation li:first-child {
+  margin: 3px 12px 3px 0;
+}
+header nav.navbar #menu-main-navigation li:last-child {
+  margin: 3px 0 3px 12px;
 }
 
 /**************************************************************************************************
@@ -153,6 +173,8 @@ Footer
 footer {
   margin-top: 30px;
   padding: 30px 0;
+  background-color: #061651;
+  color: #FAF9F6;
 }
 footer p {
   margin: 15px 0;
@@ -164,15 +186,177 @@ footer p {
 /********************************************
 Homepage
 *********************************************/
+section#home-intro {
+  background-position: top center;
+  background-size: cover;
+  min-height: 500px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+section#home-intro h1 {
+  color: #FAF9F6;
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 2px 3px 8px #061651;
+}
+section#home-intro h2 {
+  font-weight: 300;
+  font-size: 48px;
+  margin: 0 0 30px 0;
+  color: #FAF9F6;
+  text-shadow: 2px 3px 8px #061651;
+}
+section#home-intro .homeintro-btn {
+  background: #e8e3d5;
+  color: #3A3B3C;
+  padding: 4px 90px;
+  margin: 0 30px 0 0;
+  transition: 0.15s all linear;
+}
+section#home-intro .homeintro-btn:last-child {
+  margin: 0 0 0 0;
+}
+section#home-intro .homeintro-btn:hover {
+  background-color: #FAF9F6;
+}
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  min-height: 200px;
+  max-height: 260px;
+  width: 100%;
+  background: #061651;
+  text-align: center;
+  cursor: pointer;
+}
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.4;
+}
+.grid figure figcaption {
+  padding: 2em;
+  color: #FAF9F6;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid figure figcaption::before, .grid figure figcaption::after {
+  pointer-events: none;
+}
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+.grid figure h2 {
+  word-spacing: 0.25em;
+  font-weight: 400;
+  margin: 0;
+}
+.grid figure h2 span {
+  font-weight: 800;
+}
+.grid figure p {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+.grid figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  content: "";
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+.grid figure.effect-sadie h2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #FAF9F6;
+  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+  transition: transform 0.35s, color 0.35s;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+.grid figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+.grid figure.effect-sadie:hover {
+  color: #fff;
+}
+.grid figure.effect-sadie:hover figcaption::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.grid figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.grid figure.effect-sadie:hover h2 {
+  color: #fff;
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+
 /********************************************
 Inside Page Template
 *********************************************/
 section#intro {
   background-position: top center;
-  min-height: 270px;
+  min-height: 230px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 30px;
+  border-bottom: 2px solid #3A3B3C;
 }
 
 /*# sourceMappingURL=style.css.map */

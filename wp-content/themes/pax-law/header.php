@@ -4,10 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory'); ?>/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/images/favicon-16x16.png">
+  <link rel="manifest" href="<?php bloginfo('template_directory'); ?>/images/site.webmanifest">
+  <link rel="mask-icon" href="<?php bloginfo('template_directory'); ?>/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
   <title>Paw Law, PLLC <?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
@@ -15,10 +27,20 @@
 <body <?php body_class(); ?>>
   <article>
     <header>
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-end">
+              <a href="832.248.2879">210.346.0716</a>
+            </div>
+          </div>
+        </div>
+        
+      </section>
       <nav class="navbar navbar-expand-lg justify-content-between container">
           
           <div id="logo" class="navbar-brand">
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/logo-full.jpg" alt=""></a>
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/paxlaw-full.svg" alt=""></a>
           </div>
           
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false">

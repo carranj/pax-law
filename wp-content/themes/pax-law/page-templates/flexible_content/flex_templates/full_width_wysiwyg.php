@@ -8,10 +8,10 @@
             <div class="col-md-12">
 
             <?php if($has_title):?>
-                <h2><?php the_sub_field('title'); ?></h2>
+                <h2><?php echo $title ?></h2>
             <?php endif;
 
-            the_sub_field('full_width_wysiwyg');
+            echo $full_width_content;
             ?>
             </div>
         </div>
