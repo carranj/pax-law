@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Pax Law, PLLC
 Theme URI: https://paxlawtx.com
@@ -14,15 +15,10 @@ Text Domain: Pax Law, PLLC
 Imports
 ***************************************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-/**************************************************************************************************
-Variables
-***************************************************************************************************/
-/**************************************************************************************************
-Universal
-***************************************************************************************************/
 html, body {
   width: 100%;
   height: 100%;
+  background-color: #FAF9F6;
 }
 
 article {
@@ -85,9 +81,6 @@ p {
   font-size: 18px;
 }
 
-/**************************************************************************************************
-Header
-***************************************************************************************************/
 header section#contact {
   background-color: #061651;
   color: #FAF9F6;
@@ -95,21 +88,23 @@ header section#contact {
 header section#contact a {
   color: #FAF9F6;
   text-decoration: none;
+  padding: 8px 0;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
 }
 header nav.navbar {
   padding: 12px 0px;
+  border-color: transparent;
 }
-header nav.navbar .navbar-toggler {
-  display: none;
-}
-header nav.navbar #logo.navbar-brand {
-  width: 100%;
+header nav.navbar .navbar-collapse {
+  justify-content: end;
 }
 header nav.navbar #logo.navbar-brand img {
   width: 100%;
   max-width: 375px;
 }
-header nav.navbar img.nav-toggle {
+header nav.navbar img.nav-toggler {
   max-width: 40px;
   padding: 5px 3px;
 }
@@ -119,57 +114,120 @@ header nav.navbar #menu-main-navigation {
   margin-top: 0;
   margin-bottom: 0;
 }
-header nav.navbar #menu-main-navigation li {
-  display: inline-block;
-  border-bottom: 1px solid #FAF9F6;
-  margin: 3px 12px;
+header nav.navbar #menu-main-navigation > li.current_page_item {
+  background-color: #061651;
 }
-header nav.navbar #menu-main-navigation li.current-menu-item {
-  border-bottom: 1px solid #010101;
+header nav.navbar #menu-main-navigation > li.current_page_item a {
+  color: #FAF9F6;
 }
-header nav.navbar #menu-main-navigation li.current-menu-item a {
-  color: #010101;
-}
-header nav.navbar #menu-main-navigation li a {
+header nav.navbar #menu-main-navigation > li a {
   text-decoration: none;
   font-size: 18px;
-  color: #010101;
+  color: #061651;
   font-weight: 500;
-  transition: all 0.15s linear;
-}
-header nav.navbar #menu-main-navigation li:hover a {
-  text-decoration: none;
-  color: #818181;
-  transition: all 0.15s linear;
-}
-header nav.navbar #menu-main-navigation li:hover .sub-menu {
   display: block;
+  width: 100%;
+  transition: all 0.15s linear;
+  padding: 6px 8px;
+  border-top: 1px solid #061651;
 }
-header nav.navbar #menu-main-navigation li ul.sub-menu {
-  display: none;
-  position: absolute;
+header nav.navbar #menu-main-navigation > li .sub-menu {
+  list-style: none;
   margin: 0;
   padding: 0;
-  width: 180px;
-  font-weight: 400;
-  text-transform: none;
+  background-color: #FAF9F6;
+  position: relative;
+  z-index: 1000;
 }
-header nav.navbar #menu-main-navigation li ul.sub-menu li {
-  width: 180px;
+header nav.navbar #menu-main-navigation > li .sub-menu .current_page_item {
+  background: #061651;
 }
-header nav.navbar #menu-main-navigation li ul.sub-menu li a {
-  text-align: left;
+header nav.navbar #menu-main-navigation > li .sub-menu .current_page_item a {
+  color: #FAF9F6;
 }
-header nav.navbar #menu-main-navigation li:first-child {
-  margin: 3px 12px 3px 0;
+header nav.navbar #menu-main-navigation > li .sub-menu li a {
+  color: #061651;
 }
-header nav.navbar #menu-main-navigation li:last-child {
-  margin: 3px 0 3px 12px;
+header nav.navbar #menu-main-navigation > li:last-child a {
+  border-bottom: 1px solid #061651;
+}
+@media only screen and (min-width: 992px) {
+  header nav.navbar #menu-main-navigation li {
+    display: inline;
+    float: left;
+    border-bottom: 1px solid #FAF9F6;
+    margin: 3px 12px;
+    position: relative;
+  }
+  header nav.navbar #menu-main-navigation li:hover a {
+    text-decoration: none;
+    color: #818181;
+    transition: all 0.15s linear;
+  }
+  header nav.navbar #menu-main-navigation li:hover .sub-menu {
+    display: block;
+    background: #FAF9F6;
+  }
+  header nav.navbar #menu-main-navigation li:first-child {
+    margin: 3px 12px 3px 0;
+  }
+  header nav.navbar #menu-main-navigation li:last-child {
+    margin: 3px 0 3px 12px;
+  }
+  header nav.navbar #menu-main-navigation li a {
+    border-top: 1px solid #FAF9F6;
+    cursor: pointer;
+  }
+  header nav.navbar #menu-main-navigation li#menu-item-17 a {
+    background-color: #ac9283;
+    color: #FAF9F6;
+    padding: 4px 28px;
+    border-radius: 6px;
+    border-color: #FAF9F6;
+  }
+  header nav.navbar #menu-main-navigation li#menu-item-17.current_page_item {
+    border-bottom: none;
+  }
+  header nav.navbar #menu-main-navigation li.current_page_item {
+    background-color: #FAF9F6;
+  }
+  header nav.navbar #menu-main-navigation li.current_page_item a {
+    color: #061651;
+    border-bottom: 1px solid #061651;
+  }
+  header nav.navbar #menu-main-navigation li.current-menu-parent {
+    border-bottom: 1px solid #061651;
+  }
+  header nav.navbar #menu-main-navigation li.menu-item-has-children:after {
+    content: " ▾";
+    position: absolute;
+    right: -6px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+  header nav.navbar #menu-main-navigation ul.sub-menu {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    font-weight: 400;
+    text-transform: none;
+  }
+  header nav.navbar #menu-main-navigation ul.sub-menu li {
+    width: 180px;
+    margin: 0;
+  }
+  header nav.navbar #menu-main-navigation ul.sub-menu li a {
+    text-align: left;
+  }
+  header nav.navbar #menu-main-navigation ul.sub-menu li a:hover {
+    background: #ac9283;
+    color: #FAF9F6;
+  }
 }
 
-/**************************************************************************************************
-Footer
-***************************************************************************************************/
 footer {
   margin-top: 30px;
   padding: 30px 0;
@@ -183,9 +241,6 @@ footer p {
   line-height: 1.5rem;
 }
 
-/********************************************
-Homepage
-*********************************************/
 section#home-intro {
   background-position: top center;
   background-size: cover;
@@ -194,31 +249,49 @@ section#home-intro {
   align-items: center;
   justify-content: center;
 }
-section#home-intro h1 {
+section#home-intro .intro-container {
+  max-width: 1080px;
+}
+section#home-intro .intro-container h1 {
   color: #FAF9F6;
   text-align: center;
   font-size: 60px;
   text-shadow: 2px 3px 8px #061651;
 }
-section#home-intro h2 {
+section#home-intro .intro-container h2 {
   font-weight: 300;
   font-size: 48px;
   margin: 0 0 30px 0;
   color: #FAF9F6;
   text-shadow: 2px 3px 8px #061651;
 }
-section#home-intro .homeintro-btn {
+section#home-intro .intro-container .homeintro-btn {
   background: #e8e3d5;
+  min-width: 300px;
   color: #3A3B3C;
   padding: 4px 90px;
-  margin: 0 30px 0 0;
+  margin: 8px 0px;
   transition: 0.15s all linear;
 }
-section#home-intro .homeintro-btn:last-child {
-  margin: 0 0 0 0;
+section#home-intro .intro-container .homeintro-btn:first-child {
+  margin: 0 0 8px 0;
 }
-section#home-intro .homeintro-btn:hover {
+section#home-intro .intro-container .homeintro-btn:last-child {
+  margin: 8px 0 0 0;
+}
+section#home-intro .intro-container .homeintro-btn:hover {
   background-color: #FAF9F6;
+}
+
+.wpcf7 {
+  margin: 30px 0 0 0;
+}
+.wpcf7 label {
+  width: 100%;
+}
+.wpcf7 p {
+  margin: 0px;
+  margin-bottom: 0px;
 }
 
 .grid {
@@ -236,7 +309,7 @@ section#home-intro .homeintro-btn:hover {
   min-height: 200px;
   max-height: 260px;
   width: 100%;
-  background: #061651;
+  background: #ac9283;
   text-align: center;
   cursor: pointer;
 }
@@ -246,7 +319,7 @@ section#home-intro .homeintro-btn:hover {
   min-height: 200px;
   min-height: 100%;
   max-width: 100%;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .grid figure figcaption {
   padding: 2em;
@@ -295,8 +368,8 @@ section#home-intro .homeintro-btn:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
-  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  background: -webkit-linear-gradient(top, rgba(67, 57, 51, 0) 0%, rgba(67, 57, 51, 0.8) 75%);
+  background: linear-gradient(to bottom, rgba(67, 57, 51, 0) 0%, rgba(67, 57, 51, 0.8) 75%);
   content: "";
   opacity: 0;
   -webkit-transform: translate3d(0, 50%, 0);
@@ -314,6 +387,7 @@ section#home-intro .homeintro-btn:hover {
   transition: transform 0.35s, color 0.35s;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
+  text-shadow: 2px 2px 8px #5a473c;
 }
 .grid figure.effect-sadie p {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -346,17 +420,32 @@ section#home-intro .homeintro-btn:hover {
   transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
 }
 
-/********************************************
-Inside Page Template
-*********************************************/
 section#intro {
-  background-position: top center;
-  min-height: 230px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 30px;
   border-bottom: 2px solid #3A3B3C;
+  background-color: #ac9283;
+}
+section#intro .banner-image {
+  background-position: top center;
+  opacity: 0.4;
+  background-size: cover;
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  z-index: 10;
+}
+section#intro .container {
+  height: 230px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 100;
+  position: relative;
+}
+section#intro .container h1 {
+  color: #FAF9F6;
+  opacity: 1;
+  text-shadow: 2px 2px 8px black;
 }
 
 /*# sourceMappingURL=style.css.map */

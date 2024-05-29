@@ -1,0 +1,29 @@
+section{
+    &#intro{
+      margin-bottom: 30px;
+      border-bottom: 2px solid $dark-grey;
+      background-color: $pax-tan;
+      .banner-image{
+        background-position: top center;
+        opacity: .4;
+        background-size: cover;
+        width: 100%;
+        height: 230px;
+        position: absolute;
+        z-index: 10;
+      }
+      .container{
+        height: 230px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 100;
+        position: relative;
+        h1{
+          color:$off-white;
+          opacity: 1;
+          text-shadow: 2px 2px 8px darken($pax-blue, 60%);
+        }
+      }
+    }
+  }

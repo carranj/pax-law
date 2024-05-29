@@ -1,0 +1,176 @@
+header {
+  section{
+    &#contact{
+      background-color: $pax-blue;
+      color:$off-white;
+      a{
+        color:$off-white;
+        text-decoration: none;
+        padding: 8px 0;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+  nav{
+    &.navbar{
+      padding:12px 0px;
+      border-color: transparent;
+      .navbar-collapse {
+        justify-content: end;
+      }
+      #logo {
+        &.navbar-brand{
+          // width:100%;
+          img {
+            width: 100%;
+            max-width: 375px;
+          }
+        }
+      }
+      img{
+        &.nav-toggler{
+          max-width: 40px;
+          padding: 5px 3px;
+        }
+      }
+      
+      #menu-main-navigation {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        > li {
+
+          &.current_page_item {
+            background-color: $pax-blue;
+            a{
+              color:$off-white;
+            }
+          }
+          a {
+            text-decoration: none;
+            font-size:18px;
+            color: $pax-blue;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            transition: all 0.15s linear;
+            padding:6px 8px;
+            border-top:1px solid $pax-blue;
+          }
+         
+          .sub-menu{
+            list-style: none;
+            margin:0;
+            padding:0;
+            background-color: $off-white;
+            position: relative;
+            z-index: 1000;
+            .current_page_item{
+              background:$pax-blue;
+              a{
+                color:$off-white;
+              }
+            }
+            li{
+              a{
+                color:$pax-blue;
+              }
+            }
+          }
+          &:last-child{
+            a{
+              border-bottom:1px solid $pax-blue;
+            }
+          }
+        }
+        @media only screen and (min-width: 992px) {
+            li{
+              display: inline;
+              float: left;
+              border-bottom:1px solid $off-white;
+              margin:3px 12px;
+              position: relative;
+              &:hover {
+                a {
+                  text-decoration: none;
+                  color: lighten($black, 50%);
+                  transition: all 0.15s linear;
+                }
+                .sub-menu{
+                  display: block;
+                  background:$off-white ;
+                }
+              }
+              &:first-child{
+                margin:3px 12px 3px 0;
+              }
+              &:last-child{
+                margin:3px 0 3px 12px;
+              }
+              a{
+                border-top: 1px solid $off-white;
+                cursor: pointer;
+              }
+              &#menu-item-17{
+                a{
+                  background-color: $pax-tan;
+                  color:$off-white;
+                  padding:4px 28px;
+                  border-radius: 6px;
+                  border-color: $off-white;
+                }
+                &.current_page_item{
+                  border-bottom:none ;
+                }
+              }
+              &.current_page_item {
+                background-color: $off-white;
+                a{
+                  color:$pax-blue;
+                  border-bottom: 1px solid $pax-blue;
+                }
+              }
+              &.current-menu-parent{
+                border-bottom: 1px solid $pax-blue;
+              }
+              &.menu-item-has-children{
+                &:after{
+                  content: ' ▾';
+                  position: absolute;
+                  right:-6px;
+                  top: 55%;
+                  transform: translateY(-50%);
+                  font-size: 16px;
+                }
+              }
+            }
+            ul{
+              &.sub-menu{
+                display: none;
+                position: absolute;
+                margin:0;
+                padding:0;
+                width:180px;
+                font-weight: 400;
+                text-transform: none;
+                li{
+                  width:180px;
+                  margin:0;
+                  a{
+                    text-align: left;
+                    &:hover{
+                      background:$pax-tan;
+                      color:$off-white;
+                    }
+                  }
+                }
+              }
+            }
+        }
+      }
+    }
+  }  
+}
