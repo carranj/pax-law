@@ -6,11 +6,17 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /pax-law/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /pax-law/index.php [L]
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+
+
+#https redirect
+Header always set Content-Security-Policy: upgrade-insecure-requests
+#https redirect
