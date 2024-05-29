@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<section id="intro" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+<section id="intro">
+	<div class="banner-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">

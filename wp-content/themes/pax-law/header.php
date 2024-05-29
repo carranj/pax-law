@@ -31,38 +31,32 @@
         <div class="container">
           <div class="row">
             <div class="col-12 text-end">
-              <a href="832.248.2879">210.346.0716</a>
+            <a href="tel:+12103460716">210.346.0716</a>
             </div>
           </div>
         </div>
-        
       </section>
-      <nav class="navbar navbar-expand-lg justify-content-between container">
-          
-          <div id="logo" class="navbar-brand">
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/paxlaw-full.svg" alt=""></a>
-          </div>
-          
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <div class="nav-items">
-              <?php
+
+      <nav class="navbar navbar-expand-lg">
+      <div class="container">
+      <a id="logo" class="navbar-brand" href="<?php echo home_url(); ?>">
+      <img src="<?php echo get_template_directory_uri() ?>/images/paxlaw-full.svg" alt="">
+      </a>        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+        <?php
               $args = array(
                 'menu'      => 'menu-1',
                 'container' => 'ul',
-                'menu_class'      => 'navbar-nav',
+                'menu_class'      => 'navbar-nav navbar-right',
               );
               wp_nav_menu($args);
               ?>
-            </div>
-          </div>
 
-        
-      </nav>
+        </div>
+      </div>
+    </nav>
     </header>
     <main>
