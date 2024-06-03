@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <p>&copy; Copyright <?php echo date('Y'); ?> Paw Law, PLLC. All rights reserved</p>
+          <p>&copy; Copyright <?php echo date('Y'); ?> Pax Law, PLLC. All rights reserved</p>
         </div>
       </div>
     </div>
